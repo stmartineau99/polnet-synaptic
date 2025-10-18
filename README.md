@@ -49,23 +49,54 @@ The installation has been tested in Ubuntu 22.04 and Windows 10 and 11.
 All Features Tomogram Simulation Script
 This repository contains a Python script for generating tomograms simulating various features such as membranes, helicoidal fibers, globular protein clusters, and more. The script is highly configurable and allows users to specify parameters via command-line arguments.
 
-Features
-Simulates tomograms with:
-Membranes (spherical, elliptical, toroidal)
-Helicoidal fibers (actin, microtubules)
-Globular protein clusters
-Membrane-bound proteins
-Outputs:
-Simulated density maps (.mrc)
-3D reconstructed tomograms (.mrc)
-Micrograph stacks
-Polydata files (.vtp)
-STAR file mapping particle coordinates and orientations with tomograms
-Configurable via command-line arguments.
-Includes logging and input file previews.
+Features:
+    Simulates tomograms with:
+    Membranes (spherical, elliptical, toroidal)
+    Helicoidal fibers (actin, microtubules)
+    Globular protein clusters
+    Membrane-bound proteins
+    Outputs:
+    Simulated density maps (.mrc)
+    3D reconstructed tomograms (.mrc)
+    Micrograph stacks
+    Polydata files (.vtp)
+    STAR file mapping particle coordinates and orientations with tomograms
+    Configurable via command-line arguments.
+    Includes logging and input file previews.
 
 
+1. Run the Script with Default Parameters:
+    ```console
+    python all_features_argument.py .
+    ```
 
+2.Run the Script with Custom Output Directory:
+    ```console
+    python all_features_argument.py --out_dir /path/to/output .
+    ```
+
+3.Run the Script with Custom VOI Shape and Number of Tomograms:
+    ```console
+    python all_features_argument.py --voi_shape 1024 1024 250 --ntomos 10 .
+    ```
+4.Preview Input Files:
+The script automatically previews input files and saves them as .tar.gz archives in the output directory.
+
+
+Output
+1.Generated Files:
+    Simulated density maps (.mrc)
+    Polydata files (.vtp)
+    STAR file mapping particle coordinates and orientations with tomograms
+2.Log Files:
+    simulation-output_<job_id>.log: General log messages.
+    simulation_<job_id>_error.log: Error messages.
+3.Statistics
+    The script generates statistics for the simulated tomograms, including:
+    Number of membranes, actin, microtubules, proteins, and membrane proteins.
+    Volume occupied by each feature.
+    Total time taken for the simulation.
+    
 ## Documentation
 
 Folder **docs** contains the file **default_settings.pdf**, it describes the defaults settings for the hardcoded script to generate synthetic tomogram **scripts/data_gen/all_features.py**.
