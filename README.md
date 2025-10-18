@@ -46,50 +46,25 @@ The installation has been tested in Ubuntu 22.04 and Windows 10 and 11.
 
 ## Usage
 
-### Local usage
+All Features Tomogram Simulation Script
+This repository contains a Python script for generating tomograms simulating various features such as membranes, helicoidal fibers, globular protein clusters, and more. The script is highly configurable and allows users to specify parameters via command-line arguments.
 
-First open **Jupyter** by running:
+Features
+Simulates tomograms with:
+Membranes (spherical, elliptical, toroidal)
+Helicoidal fibers (actin, microtubules)
+Globular protein clusters
+Membrane-bound proteins
+Outputs:
+Simulated density maps (.mrc)
+3D reconstructed tomograms (.mrc)
+Micrograph stacks
+Polydata files (.vtp)
+STAR file mapping particle coordinates and orientations with tomograms
+Configurable via command-line arguments.
+Includes logging and input file previews.
 
-```console
-jupyter notebook
-```
-If you are not familiar with jupyter notebooks, first get started with https://docs.jupyter.org/en/latest/running.html
 
-To generate a synthetic dataset run on **Jupyter** next notebook: **gui/gen_dataset.ipynb**
-
-To create you own structural models next Jupyter notebooks are available:
-
-1. Membranes:  **gui/create_membrane_models.ipynb**
-2. Filaments:  **gui/create_filament_models.ipynb**
-3. Macromolecules:
-   - Atomic model (PDB) to electron density map (MRC): **gui/atomic_to_density.ipynb**
-   - Only for membrane bound macromolecules: **gui/align_membrane_proteins.ipynb**
-   - Models: **gui/create_macromolecule_models.ipynb**
-
-Exemplary videos for using the GUI are avilable at [Zenodo](https://zenodo.org/records/10735525).
-
-**Important note**: all Jupyter notebooks are thoroughly self-documented in order to guide the user in the process. In addition, they contain graphic objects and default setting to facilitate the process.
-
-### Launch with Docker
-
-#### Build docker
-
-```
-bash create_docker.sh
-```
-
-#### Digital sample generation
-First, you need to modify the config file (example:`scripts/config_sample.yaml`).
-
-```
-bash run_docker.sh --out_dir /path/to/output/directory --config /path/to/config_script.yaml
-```
-
-#### Acquisition simulation
-First, you need to modify the config file (example:`scripts/config_acquisition.yaml`).
-```
-bash run_docker.sh --out_dir /path/to/output/directory --config /path/to/config_script.yaml
-```
 
 ## Documentation
 
