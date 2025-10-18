@@ -70,8 +70,6 @@ The script is **highly configurable** and allows users to specify parameters via
 **Outputs:**
 
 * Simulated density maps (`.mrc`)
-* 3D reconstructed tomograms (`.mrc`)
-* Micrograph stacks
 * Polydata files (`.vtp`)
 * STAR file mapping particle coordinates and orientations with tomograms
 * Configurable via command-line arguments
