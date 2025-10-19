@@ -51,14 +51,14 @@ You can copy-paste this directly into your `README.md` file, and it will render 
 
 ---
 
-## 🧬 All Features Tomogram Simulation Script
+## All Features Tomogram Simulation Script
 
 This repository contains a **Python script for generating tomograms** simulating various features such as membranes, helicoidal fibers, globular protein clusters, and more.
 The script is **highly configurable** and allows users to specify parameters via **command-line arguments**.
 
 ---
 
-### 🚀 Features
+### Features
 
 **Simulates tomograms with:**
 
@@ -77,27 +77,27 @@ The script is **highly configurable** and allows users to specify parameters via
 
 ---
 
-### ⚙️ Usage
+### Usage
 
-#### 1 Run the Script with Default Parameters
+#### 1. Run the Script with Default Parameters
 
 ```console
 python all_features_argument.py
 ```
 
-#### 2 Run the Script with Custom Output Directory
+#### 2. Run the Script with Custom Output Directory
 
 ```console
 python all_features_argument.py --out_dir /path/to/output
 ```
 
-#### 3 Run the Script with Custom VOI Shape and Number of Tomograms
+#### 3. Run the Script with Custom VOI Shape and Number of Tomograms
 
 ```console
 python all_features_argument.py --voi_shape 1024 1024 250 --ntomos 10
 ```
 
-#### 4 Run the Script with Synaptic Settings
+#### 4. Run the Script with Synaptic Settings
 
 ```console
 python all_features_short_sn_parallel.py --out_dir /path/to/output
@@ -108,20 +108,20 @@ The script automatically **previews input files** and saves them as **`.tar.gz` 
 
 ---
 
-### 📦 Output
+### Output
 
-#### 🧪 Generated Files
+#### Generated Files
 
 * Simulated density maps (`.mrc`)
 * Polydata files (`.vtp`)
 * STAR file mapping particle coordinates and orientations with tomograms
 
-#### 🧾 Log Files
+#### Log Files
 
 * `simulation-output_<job_id>.log` — General log messages
 * `simulation_<job_id>_error.log` — Error messages
 
-#### 📊 Statistics
+#### Statistics
 
 The script generates detailed statistics for each simulated tomogram, including:
 
