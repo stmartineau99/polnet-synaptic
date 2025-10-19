@@ -121,15 +121,15 @@ def parse_arguments():
     parser = argparse.ArgumentParser(description='Generate synthetic tomograms with various features')
     
     # Path arguments
-    parser.add_argument('--root_path', default="/mnt/lustre-grete/usr/u15206/polnet/data_new_1",
+    parser.add_argument('--root_path', default=os.path.realpath(os.getcwd() + "/../../data"),
                        help='Root path for protein data')
-    parser.add_argument('--root_path_actin', default="/mnt/lustre-grete/usr/u15206/polnet_data/data",
+    parser.add_argument('--root_path_actin', default=os.path.realpath(os.getcwd() + "/../../polnet_data/data"),
                        help='Root path for actin data')
-    parser.add_argument('--root_path_membrane', default="/mnt/lustre-grete/usr/u15206/polnet_data/data",
+    parser.add_argument('--root_path_membrane', default=os.path.realpath(os.getcwd() + "/../../polnet_data/data"),
                        help='Root path for membrane data')
-    parser.add_argument('--root_path_mb', default="/mnt/lustre-grete/usr/u15206/polnet_data/data",
+    parser.add_argument('--root_path_mb', default=os.path.realpath(os.getcwd() + "/../../polnet_data/data"),
                        help='Root path for membrane protein data')
-    parser.add_argument('--out_dir', default="/scratch-grete/projects/nim00007/cryo-et/synthetic_synaptic_data/simulation_dir_1/all_v0",
+    parser.add_argument('--out_dir', default=None,
                        help='Output directory')
     
     # Tomogram generation parameters
